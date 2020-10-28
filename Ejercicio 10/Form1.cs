@@ -16,5 +16,15 @@ namespace Ejercicio_10
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            textBox1.Text = hScrollBar1.Value.ToString() + "%";
+        }
     }
 }

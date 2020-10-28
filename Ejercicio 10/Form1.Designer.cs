@@ -28,13 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // hScrollBar1
+            // 
+            this.hScrollBar1.Location = new System.Drawing.Point(141, 152);
+            this.hScrollBar1.Maximum = 89;
+            this.hScrollBar1.Minimum = 50;
+            this.hScrollBar1.Name = "hScrollBar1";
+            this.hScrollBar1.Size = new System.Drawing.Size(599, 26);
+            this.hScrollBar1.TabIndex = 0;
+            this.hScrollBar1.Value = 50;
+            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(141, 221);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(599, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.hScrollBar1);
+            this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

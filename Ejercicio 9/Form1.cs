@@ -16,5 +16,40 @@ namespace Ejercicio_9
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+
+            int num;
+
+            do
+            {
+                num = random.Next(1, 11);
+            } while (num % 2 != 0);
+
+
+            comboBox1.Items.Add("Nº " + num);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = comboBox1.SelectedItem.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+
+            int num;
+
+            do
+            {
+                num = random.Next(1, 11);
+            } while (num % 2 == 0);
+
+
+            comboBox1.Items.Add("Nº " + num);
+        }
     }
 }
